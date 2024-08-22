@@ -1,7 +1,7 @@
 {
   "name": "dev.hai-vr.resilience.prefabulous.conversions",
   "displayName": "Haï ~ Prefabulous for Platform Conversions",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.0-beta.4",
   "unity": "2019.4",
   "description": "Prefabulous for Platform Conversions https://docs.hai-vr.dev/docs/products/prefabulous/conversions",
   "vrchatVersion" : "2022.1.1",
