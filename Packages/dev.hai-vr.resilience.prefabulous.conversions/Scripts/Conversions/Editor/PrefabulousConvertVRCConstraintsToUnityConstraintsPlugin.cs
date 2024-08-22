@@ -9,11 +9,11 @@ using UnityEngine;
 using UnityEngine.Animations;
 using Object = UnityEngine.Object;
 
-[assembly: ExportsPlugin(typeof(PrefabulousConvertBackToUnityConstraintsPlugin))]
+[assembly: ExportsPlugin(typeof(PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin))]
 namespace Prefabulous.Conversions.Shared.Editor
 {
     [CustomEditor(typeof(PrefabulousConvertVRCConstraintsToUnityConstraints))]
-    public class PrefabulousConvertBackToUnityConstraintsEditor : UnityEditor.Editor {
+    public class PrefabulousConvertVRCConstraintsToUnityConstraintsEditor : UnityEditor.Editor {
         public override void OnInspectorGUI()
         {
 #if PREFABULOUS_CONVERSIONS_VRCHAT_IS_INSTALLED
@@ -22,10 +22,10 @@ namespace Prefabulous.Conversions.Shared.Editor
         }
     }
     
-    public class PrefabulousConvertBackToUnityConstraintsPlugin : Plugin<PrefabulousConvertBackToUnityConstraintsPlugin>
+    public class PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin : Plugin<PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin>
     {
-        public override string QualifiedName => "dev.hai-vr.prefabulous.universal.ConvertBackToUnityConstraints";
-        public override string DisplayName => "Prefabulous Universal - Convert back to Unity Constraints";
+        public override string QualifiedName => "dev.hai-vr.prefabulous.conversions.ConvertVRCConstraintsToUnityConstraints";
+        public override string DisplayName => "Prefabulous for Platform Conversions - Convert VRCConstraints to UnityConstraints";
 
         private readonly HashSet<string> _candidates = new HashSet<string>
         {
