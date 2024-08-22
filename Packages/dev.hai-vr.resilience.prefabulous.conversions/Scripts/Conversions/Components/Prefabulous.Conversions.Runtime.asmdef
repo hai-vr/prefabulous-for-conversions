@@ -1,0 +1,20 @@
+{
+    "name": "Prefabulous.Conversions.Runtime",
+    "references": [
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.vrchat.avatars",
+            "expression": "",
+            "define": "PREFABULOUS_CONVERSIONS_VRCHAT_IS_INSTALLED"
+        }
+    ],
+    "noEngineReferences": false
+}
