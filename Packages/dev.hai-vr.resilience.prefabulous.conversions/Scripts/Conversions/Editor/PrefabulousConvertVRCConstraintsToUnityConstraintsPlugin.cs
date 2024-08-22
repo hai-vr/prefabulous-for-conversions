@@ -25,7 +25,7 @@ namespace Prefabulous.Conversions.Shared.Editor
     public class PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin : Plugin<PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin>
     {
         public override string QualifiedName => "dev.hai-vr.prefabulous.conversions.ConvertVRCConstraintsToUnityConstraints";
-        public override string DisplayName => "Prefabulous for Platform Conversions - Convert VRCConstraints to UnityConstraints";
+        public override string DisplayName => "Prefabulous for Platform Conversions - Convert VRCConstraints to Unity Constraints";
 
         private readonly HashSet<string> _candidates = new HashSet<string>
         {
@@ -41,7 +41,7 @@ namespace Prefabulous.Conversions.Shared.Editor
         {
             var seq = InPhase(BuildPhase.Transforming);
             
-            seq.Run("Convert back to Unity Constraints", ConvertBackToUnityConstraints);
+            seq.Run("Convert VRCConstraints to Unity Constraints", ConvertBackToUnityConstraints);
         }
 
         private void ConvertBackToUnityConstraints(BuildContext context)
