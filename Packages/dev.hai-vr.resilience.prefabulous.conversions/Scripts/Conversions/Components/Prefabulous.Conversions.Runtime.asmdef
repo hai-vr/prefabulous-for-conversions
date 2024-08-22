@@ -1,6 +1,7 @@
 {
     "name": "Prefabulous.Conversions.Runtime",
     "references": [
+        "Prefabulous.Universal.Shared.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
