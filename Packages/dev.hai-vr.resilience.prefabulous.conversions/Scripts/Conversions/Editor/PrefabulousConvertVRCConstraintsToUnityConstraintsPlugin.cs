@@ -39,7 +39,7 @@ namespace Prefabulous.Conversions.Shared.Editor
 
         protected override void Configure()
         {
-            var seq = InPhase(BuildPhase.Transforming);
+            var seq = InPhase(BuildPhase.Transforming).AfterPlugin("nadena.dev.modular-avatar");
             
             seq.Run("Convert VRCConstraints to Unity Constraints", ConvertBackToUnityConstraints);
         }
