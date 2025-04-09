@@ -48,6 +48,10 @@ namespace Prefabulous.Conversions.Shared.Editor
         {
             var converts = context.AvatarRootTransform.GetComponentsInChildren<PrefabulousConvertVRCConstraintsToUnityConstraints>(true);
             if (converts.Length == 0) return;
+            foreach (var convert in converts)
+            {
+                Object.DestroyImmediate(convert);
+            }
 
             var foundConstraints = context.AvatarRootObject.GetComponentsInChildren<Component>(true)
                 .Where(component => component != null) // Unloaded scripts may be null
