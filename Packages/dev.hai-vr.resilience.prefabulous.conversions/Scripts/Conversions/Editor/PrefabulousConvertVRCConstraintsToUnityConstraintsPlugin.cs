@@ -39,7 +39,7 @@ namespace Prefabulous.Conversions.Shared.Editor
 
         protected override void Configure()
         {
-            var seq = InPhase(BuildPhase.Transforming);
+            var seq = InPhase(BuildPhase.Transforming).AfterPlugin("nadena.dev.modular-avatar");
             
             seq.Run("Convert VRCConstraints to Unity Constraints", ConvertBackToUnityConstraints);
         }
@@ -48,6 +48,10 @@ namespace Prefabulous.Conversions.Shared.Editor
         {
             var converts = context.AvatarRootTransform.GetComponentsInChildren<PrefabulousConvertVRCConstraintsToUnityConstraints>(true);
             if (converts.Length == 0) return;
+            foreach (var convert in converts)
+            {
+                Object.DestroyImmediate(convert);
+            }
 
             var foundConstraints = context.AvatarRootObject.GetComponentsInChildren<Component>(true)
                 .Where(component => component != null) // Unloaded scripts may be null
