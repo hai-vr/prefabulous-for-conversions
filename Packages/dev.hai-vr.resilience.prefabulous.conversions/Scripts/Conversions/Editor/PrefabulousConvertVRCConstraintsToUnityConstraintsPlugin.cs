@@ -22,6 +22,9 @@ namespace Prefabulous.Conversions.Shared.Editor
         }
     }
     
+#if PREFABULOUS_CONVERSIONS_NDMF_CROSSAPP_INTEGRATION_SUPPORTED
+    [RunsOnAllPlatforms]
+#endif
     public class PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin : Plugin<PrefabulousConvertVRCConstraintsToUnityConstraintsPlugin>
     {
         public override string QualifiedName => "dev.hai-vr.prefabulous.conversions.ConvertVRCConstraintsToUnityConstraints";
